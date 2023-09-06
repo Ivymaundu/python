@@ -7,5 +7,10 @@
 # *****.....
 
 stars = int(input(("Enter number of rows: ")))
-for i in range(1,6):
-    print("*", (stars))
+count=0
+for i in range(1,stars):
+    value=("*"*i)
+    count+=1
+    if count==stars:
+        value+=("."*i)
+    print(value)

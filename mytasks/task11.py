@@ -14,4 +14,13 @@ day_difference = current_day-birth_date
 month_difference = current_month-birth_month
 year_difference = current_year-birth_year
 
+if day_difference<0:
+    month_difference=month_difference-1
+    day_difference=day_difference+31
+
+if month_difference<0:
+    year_difference=year_difference-1
+    month_difference+12
+
+
 print("Your current age is ",year_difference,"years",month_difference, "months",day_difference,"days")
