@@ -3,8 +3,6 @@
 #  nhif_deductions, nhdf_deductions, nssf_deductions, gross_salary and net_salary. 
 
 class Payroll():
-    basic_salary=0
-    benefits=0
 
 
     def __init__(self,s,b):
@@ -17,6 +15,7 @@ class Payroll():
         self.find_taxable_income()
         self.find_payee()
         self.find_net_salary()
+        # self.add()
 
 
     def find_gross_salary(self):
@@ -124,6 +123,9 @@ class Payroll():
         self.total = self.nhif + self.nhdf + self.nssf + self.netpayee
         self.net_salary = self.gross_salary-self.total
         print("NET SALARY: ",self.net_salary)
+
+    
+
 calc_gross_salary = Payroll(float(input("Enter gross salary: ")),
                      float(input("Enter benefits: "))
                     )
